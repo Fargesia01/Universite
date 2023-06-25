@@ -1,0 +1,21 @@
+* Setup
+- Zwei Kreise für zwei (Distanz-)Messungen vorzunehmen
+- Je 18°-Sektoren, also 20 versch. Sektoren je Kreis (20*18=360)
+- Position E-Puck: Mittelpunkt, erster Kreis, zweiter Kreis (3*360 Positionen)
+
+* Messungen
+- Numerische Werte finden, für die einzelnen Mikros (4x)
+
+Möglich:
+- Amplitude (Höhe)
+- Breite
+- Diff. versch. Mikros
+- Steigung zwischen Anfang und Ende
+- 
+
+
+
+* Software: RandomForest, SciKit Learning
+
+
+
