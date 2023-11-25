@@ -1,0 +1,7 @@
+{
+	"type":"lights", 
+	"payload":{
+		"front":"on",
+		"back":"on"
+	}
+}

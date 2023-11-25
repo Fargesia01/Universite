@@ -1,0 +1,6 @@
+{
+	"type":"connect", 
+	"payload":{
+		"value":"true"
+	}
+}
