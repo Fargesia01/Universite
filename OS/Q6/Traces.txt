@@ -1,0 +1,75 @@
+I just added the third stove, nothing else, and nothing went wrong.
+Though the third stove is absolutely useless as of now because Stock C is filled at the rate of 1 stove but they're now 2 to empty it, which is overkill. The result is a slightly worse performance.
+
+No the stove code did not change in any way from Q5, the code was working just fine like this, I've run it dozens of times and it never deadlocked.
+
+Traces:
+Starting kitchen work ...
+Thread-0: stock input contains 15 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 14 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-1: stock output contains 1 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 13 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-2: stock output contains 2 food.
+Thread-0: stock input contains 12 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-1: stock output contains 3 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock input contains 11 food.
+Thread-2: stock output contains 4 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 10 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 9 food.
+Thread-1: stock output contains 5 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 8 food.
+Thread-2: stock output contains 6 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 7 food.
+Thread-1: stock output contains 7 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-2: stock output contains 8 food.
+Thread-0: stock input contains 6 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-1: stock output contains 9 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 5 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 4 food.
+Thread-2: stock output contains 10 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 3 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-1: stock output contains 11 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 2 food.
+Thread-2: stock output contains 12 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-1: stock output contains 13 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 1 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-0: stock input contains 0 food.
+Thread-2: stock output contains 14 food.
+Thread-1: stock intermediate contains 0 food.
+Thread-0: stock intermediate contains 1 food.
+Thread-1: stock output contains 15 food.
+Thread-2: stock intermediate contains 0 food.
+Thread-2: stock output contains 16 food.
+The stock input contains 0 food.
+The stock output contains 16 food.
+... done (1.103 second(s))
+

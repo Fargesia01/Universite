@@ -1,0 +1,8 @@
+Here the problem was that notify() does not work because as said in the comments, there's a chance that a thread wakes up the other thread helping him in his job, leading to a deadlock. To avoid that we use notifyAll() to make sure a correct thread gets the object.
+
+Traces:
+Starting kitchen work ...
+The stock input contains 0 food.
+The stock output contains 10000 food.
+... done (0.629 second(s))
+

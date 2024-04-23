@@ -1,0 +1,39 @@
+The scheduler seems to alternate equally between the two threads, here's the output:
+Starting kitchen work ...
+Thread-0: stock A contains 15 food.
+Thread-1: stock A contains 14 food.
+Thread-0: stock B contains 1 food.
+Thread-0: stock A contains 13 food.
+Thread-1: stock B contains 2 food.
+Thread-1: stock A contains 12 food.
+Thread-0: stock B contains 3 food.
+Thread-0: stock A contains 11 food.
+Thread-1: stock B contains 4 food.
+Thread-1: stock A contains 10 food.
+Thread-0: stock B contains 5 food.
+Thread-0: stock A contains 9 food.
+Thread-1: stock B contains 6 food.
+Thread-1: stock A contains 8 food.
+Thread-0: stock B contains 7 food.
+Thread-0: stock A contains 7 food.
+Thread-1: stock B contains 8 food.
+Thread-1: stock A contains 6 food.
+Thread-0: stock B contains 9 food.
+Thread-0: stock A contains 5 food.
+Thread-1: stock B contains 10 food.
+Thread-1: stock A contains 4 food.
+Thread-0: stock B contains 11 food.
+Thread-0: stock A contains 3 food.
+Thread-1: stock B contains 12 food.
+Thread-1: stock A contains 2 food.
+Thread-1: stock B contains 13 food.
+Thread-1: stock A contains 1 food.
+Thread-0: stock B contains 14 food.
+Thread-0: stock A contains 0 food.
+Thread-1: stock B contains 15 food.
+Thread-0: stock B contains 16 food.
+The stock input contains 0 food.
+The stock output contains 16 food.
+... done (0.52 second(s))
+
+Thread 1 starts, locks A, do its stuff, then unlocks, then B locks A. From there is just goes regularly.
