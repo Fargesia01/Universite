@@ -1,0 +1,4 @@
+Le projet est composé de deux applications, pour lancer le serveur il faut aller dans le répertoire /git_slay/server puis lancer la commande mix run --no-halt.
+Pour lancer le client il faut aller dans le répertoire /git_slay/client puis lancer la commande mix phx.server
+
+Ensuite la GUI est accessible via localhost:4000
