@@ -1,0 +1,30 @@
+Réflexions projet:
+
+Ce projet portant sur les règles DCG, grammaire et prolog était intéressant bien que fastidieux. Je ne vais pas m'étaler tant sur les choix d'implémentation car entre les difficultés rencontrées et les consignes données, mon implémentation est simplement une application stricte des données avec les consignes. Etant donné que chacun des prédicats fait uniquement 2-3 lignes et chacun est relativement simple conceptuellement, je ne pense pas qu'il soit nécessaire ou pertinent de débattre et discuter du pourquoi/comment. Je dirai simplement que chaque prédicat à un but simple et j'essaie à chaque fois d'adopter la syntaxe la plus directe, simple et compréhensible possible.
+
+Je souhaite en revanche parler des difficultés rencontrées car il y a en eu plusieurs (le projet n'est d'ailleurs pas totalement fonctionnel). Tout d'abord j'ai eu beaucoup de peine à m'adapter à ce nouveau paradigme, étant habitué aux langages plus "conventionnels" il m'a fallu beaucoup de temps avant de réellement comprendre un minimum comment atteindre mon but en prolog. Le temps s'est chargé de corriger cette lacune.
+Ensuite ma plus grosse difficulté que je n'ai pas réussi à corriger est le prédicat grammar, qui renvoie la liste de règle. Mon prédicat renvoie actuellement les règles sous cette forme:
+r_1-->(r_2, r_1), r_2
+Or elle devrait avoir cette forme:
+r_1-->r_2, r_1
+r_1-->r_2
+Car il y a une disjonction.
+
+Mais après moultes batailles je n'ai pas réussi à séparer chacune des disjonctions en une règle distinctes avec le même nom. Sans doute quelque chose qui m'échappe et qui n'est finalement pas bien compliqué, mais impossible de mettre la main dessus. Donc mon implémentation actuelle de grammar renvoie bien une liste correcte des règles, mais juste mal formatée. J'ai tout de même envoyé ça car  elle réalise tout de même le principal du travail, à savoir obtenir toutes les règles et les regroupper.
+
+La seconde partie où l'on ajouter les règles DCG dynamiquement à la base de donnée ne fonctionne pas non plus pour une broutille également. Les lignes devraient bien fonctionner mais comme expliqué et détaillé dans les commentaires, la sortie de expand_term m'échappe et bien qu'il renvoie true, le format est étonnant et je n'arrive pas à appeler une règle DCG ainsi ajoutée. La raison m'échappe donc totalement mais à un détail près l'implémentation devrait également être bonne.
+
+Voilà qui conclue ce retour personnel à propos du projet, ce fut une longue bataille mais très instructive.
+
+
+
+Réflexion Prolog:
+Le langage Prolog m’a vraiment poussé à revoir ma manière de penser le code.Moi qui suis habitué à des langages comme Java ou Elixir, où l’on doit souvent gérer des objets, des fonctions ou des processus de manière plus explicite, Prolog m’a demandé de penser différemment. Ici, on n’ordonne pas à l’ordinateur ce qu’il doit faire, mais on lui dit simplement ce qui est vrai, et c’est à Prolog de découvrir comment y parvenir. Cette approche a ses avantages, mais elle m’a aussi posé quelques difficultés d'adaptation, surtout au début.
+
+L’un des aspects les plus intéressants de Prolog, c’est sa gestion des relations. Chaque prédicat définit une relation, et Prolog se charge de trouver des solutions en satisfaisant ces relations. Par exemple, lors de l’implémentation des règles DCG, on définit des relations entre des symboles de grammaire, et Prolog s'occupe de résoudre les combinaisons possibles. C’est un modèle m'a semblé très abstrait au début. Mais au final, je reconnais que cette abstraction permet de traiter certains problèmes complexes de manière plus élégante.
+
+Le backtracking est également une caractéristique puissante de Prolog. En théorie, ça permet de trouver toutes les solutions possibles d’un problème en explorant chaque branche, mais en pratique, ça peut rendre le débogage compliqué, surtout quand les résultats ne sont pas ceux attendus. Par exemple, pour ce projet, j’ai eu du mal à gérer la manière dont les disjonctions sont traitées dans les règles. J’ai eu l’impression que le moteur de raisonnement de Prolog n’allait pas dans la direction que je voulais, ce qui a rendu le processus frustrant.
+
+Avec Prolog, il faut vraiment penser en termes de relations logiques, ce qui est une approche totalement différente. Et comparé à Java ou C (<3), où l’on a un contrôle plus explicite sur le déroulement du programme, en Prolog, c’est le moteur qui décide des solutions et de l'ordre d'exécution, ce qui peut compliquer le débogage surtout si comme moi on est pas habitué.
+
+En résumé, Prolog m’a permis d’explorer un paradigme différent, mais il faut du temps pour l'appréhender. Même si ça a été un défi, ce projet m’a donné un aperçu de la programmation logique, et je pense que Prolog est un excellent outil pour résoudre des problèmes logiques complexes, même si son approche nécessite un certain temps d’adaptation.
